@@ -6,6 +6,9 @@
 
 This is the open source version of the Petz Mania LLC website. The website will not work without the proper environment variables. Only authorized personels will have access to this information.
 
+## Maintainers
+- [Andre S. - Lead Full-Stack Software Engineer](https://github.com/saandre15)
+
 ## Global Dependencies
 - NodeJS >= v14.16.0
 - NPM >= 7.12.1
