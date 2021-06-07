@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    // "outDir": "./public/js",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "ES2015",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    // "esModuleInterop": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ],
+    "strictNullChecks": false
+  },
+  "include": ["src/server/**/*", "src/lib", "src/common/helper"],
+  "exclude": ["node_modules", "**/*.spec.ts"],
+}

@@ -1,0 +1,11 @@
+mixin hours-of-operation(isLight = false)
+  table.table.table-bordered(class=isLight ? " text-white ": "")
+    tr
+      th Mon - Fri
+      td 7:00am &ndash; 7:00pm
+    tr
+      th Saturday
+      td 7:30am &ndash; 7:00pm
+    tr
+      th Sunday
+      td.font-weight-bold CLOSED

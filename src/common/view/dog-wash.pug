@@ -1,0 +1,94 @@
+include templates/header.pug 
++header("Dog Wash", "Wash your dog comfortably in our spacious tubs. If you aren't comfortable with washing your dog? We can wash your dog for you instead.")
+include templates/nav.pug
+
+main
+  header
+    .jumbotron.dog-wash-header.text-white
+      .container
+        .row.my-5
+          .col-md-6
+            h1.display-4.mb-5 Dog Wash
+            p.lead
+              | Wash your dog comfortably in our spacious tubs. If you aren&apos;t
+              | comfortable with washing your dog? We can wash your dog for you
+              | instead.
+            a.btn.btn-primary(href='#getStarted') Get Started
+            a.btn.btn-primary.ml-2(href='/pricing/#dog_bath') Pricing
+          .col-md-6
+  section.py-5
+    .container
+      .row.my-5
+        .col-12
+          h1.display-4.text-center
+            | Quick Overview
+      .row.my-5
+        .col-12
+          .media.align-items-center
+            i.fas.fa-bath.text-primary.fa-8x.mr-5.d-none.d-md-block
+            .media-body
+              h3 We Wash
+              p
+                | Petz Mania makes sure you get the satisfaction of a clean and
+                | fresh smelling dog. We use PREMIUM Espree Shampoo and
+                | Conditioner on the dog, which leaves the dog smelling good and
+                | hair feeling soft. We promise a professional wash. All the dirt
+                | and grime will be washed away from the dog.
+          .media.mt-5.align-items-center
+            i.fas.fa-bath.text-primary.fa-8x.mr-5.d-none.d-md-block
+            .media-body
+              h3 Self Serve Bath
+              p
+                | Pet Mania Self-Serve Dog Bath has a large wash area with 5
+                | professional dog grooming tubs. Not only does it look
+                | professional, it&rsquo;s easy to use. The opening in the back of our
+                | doggie bath tub allows the dog to just step up and in and you
+                | can work on both sides of the tub. There&rsquo;s no need to turn the
+                | dog around while bathing. You have the freedom to move around
+                | both sides of the tub. The easy drop in tray keeps you from
+                | leaning over to bathe your dog.
+  section
+    .container
+      .row.my-5
+        .col-12
+          h1.text-center.display-4 Which Wash?
+      .row.my-5.justify-content-around.text-center
+        .col-lg-4.col-md-6.mb-5.mb-md-0
+          .card
+            .card-header
+              .card-title
+                h1.text-center We Wash
+              p.lead.font-weight-bold.text-center.text-danger
+                | Appointment Necessary
+            .card-body
+              ul.list-group.list-group-flush
+                li.list-group-item Full Body Wash
+                li.list-group-item
+                  | Espree Silky Show Shampoo and Conditioner
+                li.list-group-item Espree Cologne
+                li.list-group-item Basic Brush Out
+                li.list-group-item Ear Wipe
+                li.list-group-item Anal Gland Expression
+            .card-footer
+              a.btn.btn-primary.btn-block(href='#getStarted') Get Started
+        .col-lg-4.col-md-6
+          .card
+            .card-header
+              .card-title
+                h1.text-center Self Serve Wash
+              p.lead.font-weight-bold.text-center.text-success
+                | No Appointment Necessary
+            .card-body
+              ul.list-group.list-group-flush
+                li.list-group-item Shampoos and Conditioners
+                li.list-group-item Basic Cologne
+                li.list-group-item Towels
+                li.list-group-item Blow Dryer
+                li.list-group-item Apron
+                li.list-group-item Ear Wipes
+                li.list-group-item Brushes and Combs
+            .card-footer
+              a.btn.btn-primary.btn-block(href='#getStarted') Get Started
+  include templates/get-started.pug 
+  include templates/contact-us.pug
+include templates/footer.pug

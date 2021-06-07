@@ -1,0 +1,116 @@
+include templates/header.pug 
++header("Dog Boarding", "We offers a nice and cozy environment for your dog to stay overnight.")
+include templates/nav.pug 
+
+main
+  header
+    .jumbotron.dog-boarding-header
+      .container
+        .row.my-5
+          .col-md-6
+            h1.display-4.text-white.mb-5 Dog Boarding
+            p.lead.text-white
+              | Petz Mania offers a nice and cozy environment for your dog to stay
+              | overnight.
+            a.btn.btn-primary(href='#getStarted') Get Started
+            a.btn.btn-primary.ml-2(href='/pricing/#dog_boarding') Pricing
+  include templates/features.pug
+  section.py-5
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center Why People Choose Petz Mania
+      .row.my-5.justify-content-center
+        .col-md-8
+          #carouselReason.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#carouselReason', data-slide-to='0')
+              li(data-target='#carouselReason', data-slide-to='1')
+              li(data-target='#carouselReason', data-slide-to='2')
+            .carousel-inner
+              .carousel-item.active
+                img.d-block.w-100(src='https://res.cloudinary.com/petzmania/image/upload/e_auto_saturation/v1558314018/Assets/choose-safety.jpg', alt='First slide')
+                .carousel-caption
+                  h3.font-weight-bold LARGE FACILITY
+                  p
+                    | Petz Mania boasts one of the largest boarding and daycare
+                    | facility in the whole Dallas Fort Worth area. Our facility
+                    | in Dallas has an area of over 8,800 square feet in total.
+              .carousel-item
+                img.d-block.w-100(src='https://res.cloudinary.com/petzmania/image/upload/v1558388945/Assets/choose-size.jpg', alt='Second slide')
+                .carousel-caption
+                  h3.font-weight-bold SAFETY FIRST
+                  p
+                    | Don&apos;t settle with overcrowded facility and unsafe industry
+                    | practices such as overbooking. All dogs are sorted into
+                    | compartment depending on their size and temperament.
+              .carousel-item
+                img.d-block.w-100(src='https://res.cloudinary.com/petzmania/image/upload/e_auto_saturation/v1558314416/Assets/choose-integrity.jpg', alt='Third slide')
+                .carousel-caption
+                  h3.font-weight-bold BUILT ON INTEGRITY
+                  p
+                    | We believe that honesty is key to building a successful
+                    | experience for the customer. You can trust on us to report
+                    | major and minor incidents as soon as possible.
+            a.carousel-control-prev(href='#carouselReason', role='button', data-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+            a.carousel-control-next(href='#carouselReason', role='button', data-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Next
+  include templates/basic-requirements.pug 
+  include templates/boarding-hours.pug
+  section
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center What Should I Bring?
+      .row.my-5.justify-content-center
+        .col-md-4.text-center.mb-5.mb-md-0
+          .card.border-secondary
+            .bg-success.card-img-top.p-1
+            .card-body
+              .card-title
+                h3.font-weight-bold Permitted
+              ul.list-group.list-group-flush
+                li.list-group-item
+                  p
+                    i.fas.fa-drumstick-bite
+                    |  Food
+                li.list-group-item
+                  p
+                    i.fas.fa-tint
+                    |  Water
+                li.list-group-item
+                  p
+                    i.fas.fa-candy-cane.d-inline
+                    |  Treats
+                li.list-group-item
+                  p
+                    i.fas.fa-pills
+                    |  Medication
+                li.list-group-item
+                  p
+                    i.fas.fa-warehouse
+                    |  Cage
+        .col-md-4.text-center
+          .card.border-secondary
+            .bg-danger.card-img-top.p-1
+            .card-body
+              .card-title
+                h3.font-weight-bold Not Permitted
+              ul.list-group.list-group-flush
+                li.list-group-item
+                  p
+                    i.fas.fa-stroopwafel
+                    |  Bed
+                li.list-group-item
+                  p
+                    i.fas.fa-scroll
+                    |  Blanket
+              p.mt-3
+                | Note: All of these items will be provided during your stay.
+  include templates/holidays.pug 
+  include templates/get-started.pug 
+  include templates/contact-us.pug
+include templates/footer.pug

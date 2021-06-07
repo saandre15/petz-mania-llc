@@ -1,0 +1,108 @@
+include templates/header.pug
++header("Career", "Petz Mania is looking for team members who are passionate about providing the finest dog (and people) care and want to work in a clean, fast-paced, professional environment. Our philosophy is simple: happy employees means happy customers, and we’re focused on creating an environment that makes Petz Mania a great place to work! The following positions offer salaries commensurate with experience. We prefer applicants with comfort and experience with pets, as well as comfort and experience with working in a team environment. We offer training. AM and PM shifts available for some positions.")
+include templates/nav.pug
+
+main
+  section
+    .jumbotron.career-header
+      .container
+        .row.my-5
+          .col-md-6.text-white
+            h1.display-4.mb-5 Careers
+            p.lead
+              | Do you have a passion for dogs and cats? Working at Petz Mania, is great way to build foundational workforce skills and job experience, while also having fun.
+            a.btn.btn-primary(href='#apply') Apply Now
+            a.btn.btn-primary(href='#requirements') See Expectations
+  section
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center Job Opportunity
+      .row.my-5.bg-primary.text-secondary
+        .col-12
+          p.lead
+            | Petz Mania is looking for team members who are passionate about providing the finest dog (and people) care and want to work in a clean, fast-paced, professional environment. Our philosophy is simple: happy employees means happy customers, and we&rsquo;re focused on creating an environment that makes Petz Mania a great place to work! The following positions offer salaries commensurate with experience. We prefer applicants with comfort and experience with pets, as well as comfort and experience with working in a team environment. We offer training. AM and PM shifts available for some positions.
+  section#requirements.navOffset
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center Expectations
+      .row.my-5.justify-content-center
+        .col-md-8
+          ul.ul.nav.nav-tabs.nav-justified
+            li.nav-item
+              a.nav-link.active(href='#kennelTechTab', data-toggle='tab') Kennel Tech / Attendant
+            li.nav-item
+              a.nav-link(href='#groomerTab', data-toggle='tab') Dog-Cat Groomer / Stylist
+            li.nav-item
+              a.nav-link(href='#frontDeskTab', data-toggle='tab') Front Desk Receptionist / Dog Bather
+          .tab-content.tab-border
+            #kennelTechTab.tab-pane.fade.show.active
+              ul.list-paw
+                li
+                  p Be able to monitor up to 40 dogs alone and up to 80 dogs with a partner
+                li
+                  p Ensure the safety of dogs and cats while they are playing
+                li
+                  p Have some experience with a dog, whether personal or professional
+                li
+                  p Walking, Feeding, and Cleaning dogs and cats 
+                li
+                  p Clean and Sanitize indoor play rooms
+                li
+                  p Be comfortable with direct customer contact
+                li
+                  p
+                    | Safe and Humane animal handling including and administrating medications and more
+                li
+                  p Comfortable with big aggressive dogs
+            #groomerTab.tab-pane.fade
+              ul.list-paw
+                li
+                  p Ability to do more than one style of grooming such as asian-fusion
+                li
+                  p Motivated and Hardworking every day
+                li
+                  p Minimum of 1 year of experience as a pet groomer or stylist
+                li
+                  p
+                    | Have knowledge of breed standards, excellent scissoring techniques, and ability to handle all dogs, small or large
+                li
+                  p The ability to groom cats in not necessary, however it would be helpful
+                li
+                  p Negotiable employment/salaries
+            #frontDeskTab.tab-pane.fade
+              ul.list-paw
+                li
+                  p Take grooming reservation online, in-person, or on the phone
+                li
+                  p Checking guests in and out, retail sales, and cash handling
+                li
+                  p Comfortable in a fast-paced environments and strong customer relationship skills
+                li
+                  p Work well in a team environment
+                li
+                  p Keep direct customer area such as the lobby and bathroom clean and sanitized
+                li
+                  p Clean and Prep the tubs for the next customer use
+                li
+                  p Assist in dog bath
+                li
+                  p Feed and Take Care of cats
+  section#apply.navOffset
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center Job Application
+    .row.my-5.align-items-center
+      .col
+        .job-application.d-flex.justify-content-center.align-items-center
+          .col-md-4.col-lg-3.col-sm-6.col-8
+            .card
+              .card-body
+                .d-flex.justify-content-center.mb-3
+                  i.fas.fa-pencil-alt.fa-6x.card-img-top
+                h2.text-center
+                  a(href='job.html') Start Now
+include templates/contact-us.pug
+include templates/footer.pug

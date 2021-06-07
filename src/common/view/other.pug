@@ -1,0 +1,83 @@
+include templates/header.pug 
++header("Other Services", "Yes, we do offer services for pets other than dogs and cats.")
+include templates/nav.pug 
+
+main
+  header
+    .jumbotron.other-header
+      .container
+        .row.my-5
+          .col-md-6.text-white
+            h1.display-4.mb-5 Other Services
+            p
+              | We wouldn&apos;t be called Petz Mania if we didn&apos;t offer other services
+              | for other pets. We offer services for cats and exotic animals.
+            a.btn.btn-primary(href='#getStarted') Get Started
+            a.btn.btn-primary.ml-2(href='/pricing/#cat_services') Pricing
+  section.p-5
+    .container
+      .row.my-5
+        .col-12
+          h1.text-center.display-4 Cat Services
+      .row.my-5.justify-content-center
+        .col-lg-3.col-md-4.col-sm-8.col-10
+          .card.bg-secondary.mb-2
+            img.card-img-top(src='https://res.cloudinary.com/petzmania/image/upload/c_fill,h_480,w_480/v1577931602/cats/cat1.jpg', alt='Placeholder IMG')
+            .card-body
+              hr.border-primary
+              h2.mb-3.text-white Daycare
+              a.btn.btn-outline-primary(href='#getStarted') Get Started
+        .col-lg-3.col-md-4.col-sm-8.col-10
+          .card.bg-secondary.mb-2
+            img.card-img-top(src='https://res.cloudinary.com/petzmania/image/upload/c_fill,h_714,w_714/v1577931603/cats/cat2.jpg', alt='Placeholder IMG')
+            .card-body
+              hr.border-primary
+              h2.mb-3.text-white Boarding
+              a.btn.btn-outline-primary(href='#getStarted') Get Started
+        .col-lg-3.col-md-4.col-sm-8.col-10
+          .card.bg-secondary.mb-2
+            img.card-img-top(src='https://res.cloudinary.com/petzmania/image/upload/c_fill,h_3749,q_50,w_3749/v1577931608/cats/cat3.jpg', alt='Placeholder IMG')
+            .card-body
+              hr.border-primary
+              h2.mb-3.text-white Grooming
+              p.text-white * Subjected To Avalibility
+              a.btn.btn-outline-primary(href='#getStarted') Get Started
+  section
+    .container
+      .row.my-5
+        .col-12
+          h1.display-4.text-center Exotic Animal Boarding
+      .row.my-5
+        .col-12
+          p.lead.text-center
+            | Current list of permitted exotic animals. If your animal isn&apos;t on
+            | this list please contact Petz Mania.
+      .row.my-5
+        .col-md-6
+          ul.list-paw
+            li
+              p Turtle
+            li
+              p Tortoise
+            li
+              p Lizard
+            li
+              p Bunny
+        .col-md-6
+          ul.list-paw
+            li
+              p Sugar Gliders
+            li
+              p Chinchillas
+            li
+              p Hamsters
+            li
+              p Ferrets
+      .row.my-5
+        .col-12.text-center
+          a.btn.btn-primary.btn-sm(href='tel:214-731-6605') Contact Us
+  include templates/boarding-hours.pug 
+  include templates/holidays.pug 
+  include templates/get-started.pug 
+  include templates/contact-us.pug
+include templates/footer.pug

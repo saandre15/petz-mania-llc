@@ -1,0 +1,45 @@
+include templates/price-nav.pug
+include templates/price-table.pug
+
+include templates/header.pug 
++header("Price", "Our price list is constantly updated every day, to keep you aware of any changes and expectations.")
+include templates/nav.pug 
+
+<main>
+  <header class="bg-secondary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center  my-5">
+          <h1 class="display-3 font-weight-bold">Pricing</h1>
+          <p class="lead">Get valuable service for the affordable price. </p>
+          <p class="small">Prices were automatically updated as of <span class="font-weight-bold">#{lastUpdated}</span>.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-8 mb-3 mb-lg-0">
+          <div class="card sticky-top-center">
+            <div class="card-body">
+              <nav class="nav flex-column nav-pills">
+                +price-nav(category)
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 mt-5 mt-lg-0">
+          if Array.isArray(tables)
+            each tab, index in tables
+              +price-table(tab.name, tab.indexer, tab.message, tab.headers, tab.data)
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  
+</main>
+
+include templates/footer.pug

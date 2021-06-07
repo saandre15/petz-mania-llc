@@ -1,0 +1,13 @@
+include templates/header.pug 
++header("ERROR " + ERRORCODE, ERRORMESSAGE)
+include templates/nav.pug 
+
+main
+  header.py-5
+    .container
+      .row
+        .col
+          h1 Error #{ERRORCODE}
+          h2 #{ERRORMESSAGE}
+
+include templates/footer.pug

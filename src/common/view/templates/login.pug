@@ -1,0 +1,24 @@
++login(serviceName, postUrl, footerMessage, error)
+  form(action=postUrl, method='POST')
+    section.py-5.bg-primary
+      .container
+        .row.my-5.justify-content-center
+          .col-lg-5.col-md-6.col-sm-8
+            .card.border-dark
+              .card-body
+                h1.mb-3
+                  | Please Sign In To Access Our 
+                  = serviceName
+                if error
+                  +alert("danger", `${error}`)
+                .form-group
+                  label(for='username') Enter Username
+                  input#username.form-control(type='text', name='username', placeholder='Username')
+                .form-group
+                  label(for='password') Enter Password
+                  input#password.form-control(type='password', name='password', placeholder='Password')
+                input.btn.btn-primary.my-3(type='submit', value='Submit')
+                br
+                a.small.text-secondary(href="https://secure.petexec.net/lostPassword.php") Reset Password
+                if footerMessage
+                  p.small.text-muted= footerMessage

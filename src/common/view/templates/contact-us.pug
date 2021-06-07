@@ -1,0 +1,41 @@
+section.py-5
+  .container
+    .row.my-5
+      .col
+        h1.display-4.text-center
+          | We&apos;re Ready to Help
+    .row.my-5.justify-content-center
+      .col-md-12
+        form.form(action='/support/submit', method='POST')
+          .form__body
+            .form-group
+              label(for='name') Enter Name
+              input#inputName.form-control(type='text', name='name', placeholder='Enter Name', required='')
+            .form-group
+              label(for='email') Enter Email
+              input#inputEmail.form-control(type='email', name='email', placeholder='Enter Email', required='')
+            .form-group
+              label(for='Find Us') How did you find us?
+              select#inputFindUs.form-control(name='findUs', required='')
+                option(value='') Select an Option
+                option(value='Friends') Friends
+                option(value='Advertisments') Advertisments
+                option(value='Search Engines') Search Engines
+                option(value='Social Medias') Social Media
+                option(value='Drove By') Drove By
+            .form-group
+              label(for='reason') Contacting us on the behalf of?
+              select#inputReason.form-control(name='reason', required='')
+                option(value='') Select an Option
+                option(value='Dog Boarding') Dog Boarding
+                option(value='Dog Daycare') Dog Daycare
+                option(value='Dog Grooming') Dog Grooming
+                option(value='Dog Wash') Dog Wash
+                option(value='Dog Training') Dog Training
+                option(value='Cat Services') Cat Services
+                option(value='Exotic Animals') Exotic Animals
+            .form-group
+              label(for='message') Message
+              textarea#message.form-control(name='message', cols='30', rows='5', required='')
+            .form-group
+              input.btn.btn-primary.btn-block(type='submit', value='Submit')

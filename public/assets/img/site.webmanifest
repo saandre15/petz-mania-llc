@@ -1,0 +1,19 @@
+{
+    "name": "Petz Mania",
+    "short_name": "Petz Mania",
+    "icons": [
+        {
+            "src": "/img/favicon.ico/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/favicon.ico/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#2c3f4c",
+    "background_color": "#2c3f4c",
+    "start_url": "https://petzmania.net"
+}

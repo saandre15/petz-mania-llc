@@ -1,0 +1,12 @@
+include templates/alert.pug
+
+include templates/header.pug 
++header("Webcam Login", "Login to access our webcam.")
+include templates/nav.pug 
+include templates/login.pug
+
+main
+  +login("Web Camera", "/webcam/access", "Note: Our webcam is &quot;Free and Reliable&quot;", error)
+  
+  include templates/contact-us.pug 
+include templates/footer.pug 

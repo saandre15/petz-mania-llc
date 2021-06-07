@@ -1,0 +1,274 @@
+include templates/header.pug
++header("Job App Form", "A job application form for PETZ MANIA LLC.")
+include templates/nav.pug
+main
+  .container
+    .row
+      form.col-12(method='POST', action='/career/application', enctype='multipart/form-data')
+        h1.my-5.display-4 Create a Job Application
+        //- |         {%ALERT%}
+        p
+          | Petz Mania LLC (the &ldquo;Company&rdquo;) is an equal opportunity employer and will not base hiring on race, color, sex, national origin, religion, disability, age, sexual orientation, or any other characteristic protected by applicable federal, state, or local law. No question on this application is used for the purpose of limiting or excluding any applicant&rsquo;s consideration for employment on any basis prohibited by federal, state or local laws. It is the Company&rsquo;s policy not to refuse to hire a qualified individual with a disability because of that person&rsquo;s need for a reasonable accommodation as provided under the Americans with Disabilities Act or other applicable laws.
+        hr
+        h2.my-4 Basic Information
+        i.fas.fa-user.fa-6x.mb-3
+        .form-group
+          label(for='name') Full Name *
+          input#name.form-control.col-md-6(type='text', name='name', required='')
+        .form-group
+          label(for='username') Date *
+          input#date.form-control.col-md-6(type='date', name='date', required='')
+        .form-group
+          label(for='position') Position *
+          select#position.form-control.col-md-6(name='position', required='')
+            option(value='') Please Select an Option
+            option(value='Kennel Tech / Attendant') Kennel Tech / Attendant
+            option(value='Front Desk / Dog Bather') Front Desk / Dog Bather
+            option(value='Dog-Cat Groomer / Stylist') Dog-Cat Groomer / Stylist
+        .form-group
+          label(for='start_date') Available Start Date *
+          input#start_date.form-control.col-md-6(type='date', name='start_date', required='')
+        .form-group
+          label(for='phone_number') Phone # *
+          input#phone_number.form-control.col-md-6(type='tel', name='phone_number', required='')
+        .form-group
+          label(for='SSN') Social Security # *
+          input#SSN.form-control.col-md-6(type='num', name='SSN', required='')
+        .form-group
+          label(for='email_address') Email Address *
+          input#email_address.form-control.col-md-6(type='email', name='email_address', required='')
+        .form-group
+          label(for='address') Address *
+          input#address.form-control.col-md-6(type='text', name='address', required='')
+        .form-group
+          label(for='city') City *
+          input#city.form-control.col-md-6(type='text', name='city', required='')
+        .form-group
+          label(for='state') State *
+          select#state.form-control.col-md-6(name='state', required='')
+            option(value='AL') Alabama
+            option(value='AK') Alaska
+            option(value='AZ') Arizona
+            option(value='AR') Arkansas
+            option(value='CA') California
+            option(value='CO') Colorado
+            option(value='CT') Connecticut
+            option(value='DE') Delaware
+            option(value='DC') District Of Columbia
+            option(value='FL') Florida
+            option(value='GA') Georgia
+            option(value='HI') Hawaii
+            option(value='ID') Idaho
+            option(value='IL') Illinois
+            option(value='IN') Indiana
+            option(value='IA') Iowa
+            option(value='KS') Kansas
+            option(value='KY') Kentucky
+            option(value='LA') Louisiana
+            option(value='ME') Maine
+            option(value='MD') Maryland
+            option(value='MA') Massachusetts
+            option(value='MI') Michigan
+            option(value='MN') Minnesota
+            option(value='MS') Mississippi
+            option(value='MO') Missouri
+            option(value='MT') Montana
+            option(value='NE') Nebraska
+            option(value='NV') Nevada
+            option(value='NH') New Hampshire
+            option(value='NJ') New Jersey
+            option(value='NM') New Mexico
+            option(value='NY') New York
+            option(value='NC') North Carolina
+            option(value='ND') North Dakota
+            option(value='OH') Ohio
+            option(value='OK') Oklahoma
+            option(value='OR') Oregon
+            option(value='PA') Pennsylvania
+            option(value='RI') Rhode Island
+            option(value='SC') South Carolina
+            option(value='SD') South Dakota
+            option(value='TN') Tennessee
+            option(value='TX') Texas
+            option(value='UT') Utah
+            option(value='VT') Vermont
+            option(value='VA') Virginia
+            option(value='WA') Washington
+            option(value='WV') West Virginia
+            option(value='WI') Wisconsin
+            option(value='WY') Wyoming
+        .form-group
+          label(for='zip_code') Zip Code *
+          input#zip_code.form-control.col-md-6(type='tel', name='zip_code', required='')
+        .form-group
+          label(for='prev_family_members') Family Member who worked here? *
+          input#prev_family_members.form-control.col-md-6(type='text', name='prev_family_members')
+        .form-group
+          label(for='learn_opportunities') How did you learn about our employment opportunities? *
+          input#learn_opportunities.form-control.col-md-6(type='text', name='learn_opportunities', required='')
+        .form-group
+          label(for='applied_before') Applied Before *
+          br
+          .form-check.form-check-inline
+            input#applied_before1.form-check-input(type='radio', name='applied_before', value='yes', required='')
+            label.form-check-label(for='applied_before1') Yes
+          .form-check.form-check-inline
+            input#applied_before2.form-check-input(type='radio', name='applied_before', value='no', required='')
+            label.form-check-label(for='applied_before2') No
+        .form-group
+          label(for='legally_allowed_to_work') Legally Allowed to Work in the US? *
+          br
+          .form-check.form-check-inline
+            input#legally_allowed_to_work1.form-check-input(type='radio', name='legally_allowed_to_work', value='yes', required='')
+            label.form-check-label(for='legally_allowed_to_work1') Yes
+          .form-check.form-check-inline
+            input#legally_allowed_to_work2.form-check-input(type='radio', name='legally_allowed_to_work', value='no', required='')
+            label.form-check-label(for='legally_allowed_to_work2') No
+        .form-group
+          label(for='convicted_felony')
+            | Have you ever pled &ldquo;guilty&rdquo; or &ldquo;no contest&rdquo; to or been convicted of a felony within the past 7 years? *
+          br
+          .form-check.form-check-inline
+            input#convicted_felony1.form-check-input(type='radio', name='convicted_felony', value='yes', required='')
+            label.form-check-label(for='convicted_felony1') Yes
+          .form-check.form-check-inline
+            input#convicted_felony2.form-check-input(type='radio', name='convicted_felony', value='no', required='')
+            label.form-check-label(for='convicted_felony2') No
+        .form-group
+          label(for='abled_body')
+            | Are you able to perform the essential functions for which you are applying with or without a reasonable accommodation? *
+          br
+          .form-check.form-check-inline
+            input#abled_body1.form-check-input(type='radio', name='abled_body', value='yes', required='')
+            label.form-check-label(for='abled_body1') Yes
+          .form-check.form-check-inline
+            input#abled_body2.form-check-input(type='radio', name='abled_body', value='no', required='')
+            label.form-check-label(for='abled_body2') No
+        .form-group
+          label(for='presently_employed') Are you presently employed? *
+          br
+          .form-check.form-check-inline
+            input#presently_employed1.form-check-input(type='radio', name='presently_employed', value='yes', required='')
+            label.form-check-label(for='presently_employed1') Yes
+          .form-check.form-check-inline
+            input#presently_employed2.form-check-input(type='radio', name='presently_employed', value='no', required='')
+            label.form-check-label(for='presently_employed2') No
+        .form-group
+          label(for='can_contact_employer') May we contact your current employer? *
+          br
+          .form-check.form-check-inline
+            input#can_contact_employer1.form-check-input(type='radio', name='can_contact_employer', value='option1', required='')
+            label.form-check-label(for='can_contact_employer1') Yes
+          .form-check.form-check-inline
+            input#can_contact_employer2.form-check-input(type='radio', name='can_contact_employer', value='option2', required='')
+            label.form-check-label(for='can_contact_employer2') No
+        hr
+        h2.my-4 Education
+        i.fas.fa-user-graduate.fa-6x.mb-3
+        .form-group
+          label(for='highest_education') Highest Level of Education *
+          select#highest_education.form-control.col-md-6(name='highest_education', required='')
+            option(value='') Please Select an Option
+            option(value='High School') High School
+            option(value='College') College
+            option(value='Trade / Graduate') Trade / Graduate
+            option(value='Other') Others
+            option(value='None of The Options') None of The Options
+        .form-group
+          label(for='education_completed_year') Date Completed *
+          input#education_completed_year.form-control.col-md-6(type='date', name='education_completed_year', required='')
+        .form-group
+          label(for='is_graduated') Graduated *
+          br
+          .form-check.form-check-inline
+            input#is_graduated1.form-check-input(type='radio', name='is_graduated', value='yes', required='')
+            label.form-check-label(for='is_graduated1') Yes
+          .form-check.form-check-inline
+            input#is_graduated2.form-check-input(type='radio', name='is_graduated', value='no', required='')
+            label.form-check-label(for='is_graduated2') No
+        .form-group
+          label(for='education_course') Course of Study / Degree / Other *
+          input#education_course.form-control.col-md-6(type='text', name='education_course', required='')
+        hr
+        h2.mb-4.my-4 Most Recent Work Experience
+        i.fas.fa-suitcase.fa-6x.mb-3
+        .form-group
+          label(for='first_job') Is This Your First Job? *
+          br
+          .form-check.form-check-inline
+            input#first_job1.form-check-input(type='radio', name='first_job', value='yes', required='')
+            label.form-check-label(for='first_job1') Yes
+          .form-check.form-check-inline
+            input#first_job2.form-check-input(type='radio', name='first_job', value='no', required='')
+            label.form-check-label(for='first_job2') No
+        .form-group
+          label(for='most_recent_company') Company Name
+          input#most_recent_company.form-control.col-md-6(type='text', name='most_recent_company')
+        .form-group
+          label(for='most_recent_start_date') Start Date
+          input#most_recent_start_date.form-control.col-md-6(type='date', name='most_recent_start_date')
+        .form-group
+          label(for='most_recent_end_date') End Date
+          input#most_recent_end_date.form-control.col-md-6(type='date', name='most_recent_end_date')
+        .form-group
+          label(for='most_recent_company_address') Company Address
+          input#most_recent_company_address.form-control.col-md-6(type='text', name='most_recent_company_address')
+        .form-group
+          label(for='most_recent_company_phone_num') Company Phone #
+          input#most_recent_company_phone_num.form-control.col-md-6(type='text', name='most_recent_company_phone_num')
+        .form-group
+          label(for='most_recent_position') Position
+          input#most_recent_position.form-control.col-md-6(type='text', name='most_recent_position')
+        .form-group
+          label(for='most_recent_supervisor_name') Supervisor Name
+          input#most_recent_supervisor_name.form-control.col-md-6(type='text', name='most_recent_supervisor_name')
+        .form-group
+          label(for='most_recent_shift_type') Part Time or Full Time
+          br
+          .form-check.form-check-inline
+            input#most_recent_shift_type1.form-check-input(type='radio', name='most_recent_shift_type', value='Part Time')
+            label.form-check-label(for='inlineRadio1') Part Time
+          .form-check.form-check-inline
+            input#most_recent_shift_type2.form-check-input(type='radio', name='most_recent_shift_type', value='Full Time')
+            label.form-check-label(for='inlineRadio2') Full Time
+        .form-group
+          label(for='most_recent_starting_pay') Starting Pay
+          input#most_recent_starting_pay.form-control.col-md-6(type='text', name='most_recent_starting_pay')
+        .form-group
+          label(for='most_recent_ending_pay') Ending Pay
+          input#most_recent_ending_pay.form-control.col-md-6(type='text', name='most_recent_ending_pay')
+        .form-group
+          label(for='most_recent_duties') Duties and Responsibilites
+          textarea#most_recent_duties.form-control.col-md-6(name='most_recent_duties', cols='30', rows='10')
+        .form-group
+          label(for='most_recent_reason_for_leaving') Reason For Leaving
+          input#most_recent_reason_for_leaving.form-control.col-md-6(type='text', name='most_recent_reason_for_leaving')
+        .form-group
+          label(for='resume') Resume [5MB&gt;SIZE]
+          .input-group.col-md-6.p-0
+            .input-group-prepend
+              span#resume.input-group-text
+                i.fas.fa-upload
+            .custom-file
+              input#resume.custom-file-input(type='file', name='resume', aria-describedby='resume', accept='.doc, .docx, .txt, .pdf', value='10')
+              label.custom-file-label(for='resume') Choose file
+        #submitConfirm.modal.fade
+          .modal-dialog.modal-dialog-centered.modal-dialog-scrollable
+            .modal-content
+              .modal-header
+                h4.modal-title.font-weight-bold Terms and Conditions
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true') &times;
+              .modal-body
+                p
+                  | I hereby certify that the information contained on this application, or any other information I submit to the Company in connection with my application for employment, is true and correct to the best of my knowledge and agree to have any such statements or information checked by the Company. I authorize the Company to make a thorough investigation of my references, past employment, education, criminal background, and to secure additional job-related information about me. I also authorize the references listed above, as well as all other individuals whom the Company contacts, to provide the Company with any and all information concerning my previous employment and any other pertinent information that they may have. Further, I release all parties and persons from any and all liability for any damages that may result from furnishing such information to the Company as well as from any use or disclosure of such information by the Company or any of its agents, employees or representatives. I understand that any misrepresentation, falsification, or material omission of information on this application, or any other information I submit to the Company in connection with my application for employment, may result in my failure to receive an offer or, if I am hired, my immediate dismissal from employment.
+                p
+                  | This application is current for only 90 days. At the conclusion of this time, if have not heard from the Company and still wish to be considered for employment, I understand that it will be necessary for me to complete a new application.
+                p
+                  | I understand that if I am hired by the Company, my employment will be &ldquo;at-will&rdquo; and, just as I will be free to resign at any time, the Company reserves the right to terminate my employment at any time, with or without cause and without prior notice. I understand that no employee or representative of the Company has any authority to enter into a contract of employment, express or implied, that changes or modifies in any way such employment at-will.
+              .modal-footer.flex-column
+                p.lead By clicking submit you are agreeing to these terms and services.
+                input.btn.btn-primary.align-self-start(type='submit', value='Submit')
+      .col
+        button.btn.btn-primary.my-4(data-toggle='modal', data-target='#submitConfirm') Submit
+include templates/footer.pug

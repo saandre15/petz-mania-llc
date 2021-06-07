@@ -1,0 +1,106 @@
+include templates/header.pug 
++header("Dog Daycare", "Petz Mania is more than just a standard dog sitter. Here, dogs are allowed to socialize and play in our enormous facility.")
+include templates/nav.pug
+
+main
+  header
+    .jumbotron.dog-daycare-header
+      .container
+        .row.my-5
+          .col-md-6.text-white
+            h1.display-4.mb-5
+              | Dog Daycare
+            p.lead
+              | Petz Mania is more than just a standard dog sitter. Here, dogs are
+              | allowed to socialize and play in our enormous facility.
+            a.btn.btn-primary(href='#getStarted') Get Started
+            a.btn.btn-primary.ml-2(href='/pricing/#dog_daycare') Pricing
+  include templates/features.pug
+  //
+    <section class="py-5">
+    <div class="container">
+    <div class="row my-5">
+    <div class="col">
+    <h1 class="display-4 text-center">Switch - And Get Matching Price</h1>
+    </div>
+    </div>
+    <div class="row my-5 text-center">
+    <p class="lead">
+    Bring any valid <span class="text-uppercase">daycare purchase receipt</span> from any of our competitor, and we’ll guaranteed a price match for your first daycare purchase at Petz Mania. If you aren’t satisfied, we’ll refund your money back <span class="text-uppercase">guaranteed.</span>
+    </p>
+    </div>
+    <div class="row my-5">
+    <div class="col-md-6">
+    <ul class="list-paw">
+    <li><p class="lead">Dog Rules Resort</p></li>
+    <li><p class="lead">Top Paw</p></li>
+    <li><p class="lead">Boarding Bungalow</p></li>
+    <li><p class="lead">Pappy Pet Lodge</p></li>
+    <li><p class="lead">Furever Friends</p></li>
+    <li><p class="lead">Social Packs Dogs</p></li>
+    <li><p class="lead">Camp Bow Wow</p></li>
+    </ul>
+    </div>
+    <div class="col-md-6">
+    <ul class="list-paw">
+    <li><p class="lead">Pet Oasis</p></li>
+    <li><p class="lead">Toothache Pet Care Center</p></li>
+    <li><p class="lead">Barney Ranch</p></li>
+    <li><p class="lead">Dog Day Out</p></li>
+    <li><p class="lead">Dogtopia</p></li>
+    <li><p class="lead">Man’s Best Friends</p></li>
+    </ul>
+    </div>
+    </div>
+    <div class="row my-5 justify-content-center">
+    <a href="#getStarted" class="btn btn-primary btn-large">Get Started</a>
+    </div>
+    </div>
+    </section>
+  include templates/basic-requirements.pug
+  section.py-5.bg-primary.text-secondary
+    .container
+      .row.my-5
+        .col
+          h1.display-4.my-5.text-center
+            | Hours of Operation
+      .row.my-5.align-items-center
+        .col-md-6
+          include templates/hours-of-operation.pug 
+          +hours-of-operation(false)
+        .col-md-6.text-center
+          img.img-fluid.d-none.d-md-block(src='https://res.cloudinary.com/petzmania/image/upload/c_scale,h_880/v1558399950/Assets/dog-running.jpg', alt='Placeholder')
+  section.py-5
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center
+            | Dogs Breeds We Don&rsquo;t Accept
+      .row.my-5
+        .col-12.text-center
+          p.text-danger.font-weight-bold
+            | Due to our commercial nature we aren&rsquo;t permitted to accept these
+            | breed
+      .row.my-5
+        .col-md-6
+          ul.list-paw
+            li
+              p.lead Kangal
+            li
+              p.lead Pit-Bull
+            li
+              p.lead Boerboel
+            li
+              p.lead Staffordshire Terrier
+        .col-md-6.text-center
+          ul.list-paw
+            li
+              p.lead American Bulldog
+            li
+              p.lead Cane Corso
+            li
+              p.lead Dogo Argentino
+            li
+              p.lead Wolf-Hybrid
+  include templates/contact-us.pug
+include templates/footer.pug

@@ -1,0 +1,25 @@
+.form {
+  background: linear-gradient(100deg, rgba(#fff, .9) 0%, rgba(#fff, .9) 50%, transparent 50%) , url(https://res.cloudinary.com/petzmania/image/upload/v1558151905/Assets/form__background--img.jpg);
+  background-size: cover;
+  display: flex;
+  border-radius: 2px;
+  box-shadow: 1rem 1rem 5rem rgba(0,0,0, .4);
+
+  @include media-breakpoint-down(md) {
+    background: linear-gradient(100deg, rgba(#fff, .9) 0%, rgba(#fff, .9) 100%, transparent 100%) , url(https://res.cloudinary.com/petzmania/image/upload/v1558151905/Assets/form__background--img.jpg);
+  }
+  
+  &__body {
+    width: 45%;
+    padding:  4rem;
+
+    @include media-breakpoint-down(xs) {
+      padding: 1rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+}

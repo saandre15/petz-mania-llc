@@ -1,0 +1,232 @@
+include templates/header.pug 
++header("Dog Grooming", "Get your dog professionally groomed at Petz Mania. We offer many styles of grooming such as Asian fusion and more. ")
+include templates/nav.pug 
+
+main
+  header
+    .jumbotron.dog-grooming-header
+      .container
+        .row.my-5
+          .col-md-6.mb-5.mb-md-0.text-white
+            h1.display-4.mb-5 Dog Grooming
+            p.lead
+              | Get your dog professionally groomed at Petz Mania. We offer many
+              | styles of grooming such as Asian fusion and more.
+            a.btn.btn-primary(href='#getStarted') Get Started
+            a.btn.btn-primary.ml-2(href='/pricing/#dog_full_groom') Pricing
+          .col-md-6
+            .card.text-center
+              .card-body
+                h1
+                  u Grooming Hours
+                h2.mt-4
+                  | Tuesday &mdash; Saturday
+                p.font-weight-bold By Appointment Only
+  section.py-5
+    .container
+      .row.my-5
+        .col-12
+          h1.display-4.text-center
+            | Select a Service
+      .row.my-5
+        .card.w-100
+          .card-body
+            .row.align-items-center
+              .col-lg-3
+                nav.nav.nav-pills.flex-column.mx-md-5.mx-lg-0
+                  a.btn.btn-outline-secondary.active.mb-2(href='#fullServiceGroom', data-toggle='pill') Full Service Groom
+                  a.btn.btn-outline-secondary.mb-2(href='#miniGroom', data-toggle='pill') Mini Groom
+                  a.btn.btn-outline-secondary.mb-2(href='#deshedTreatment', data-toggle='pill') De-Shed Treatment
+                  a.btn.btn-outline-secondary.mb-2(href='#fleaBath', data-toggle='pill') Flea &amp; Tick Bath
+                  a.btn.btn-outline-secondary(href='#aLaCarte', data-toggle='pill') A La Carte
+              .col-lg-9
+                .tab-content.p-5
+                  #fullServiceGroom.tab-pane.show.fade.active
+                    h3.mb-3 Includes
+                    hr
+                    .row
+                      .col-md-6
+                        ul.list-paw
+                          li
+                            p Massaging Bath
+                          li
+                            p Nail Trim
+                          li
+                            p Anal Gland Expression
+                          li
+                            p Ear Cleaning and Plucking
+                      .col-md-6
+                        ul.list-paw
+                          li
+                            p Detangling Brush Out
+                          li
+                            p Full Style Hair Cut
+                          li
+                            p Premium Cologne
+                          li
+                            p Bandana or Bow
+                    a.btn.btn-primary(href='#getStarted') Get Started
+                  #miniGroom.tab-pane.fade
+                    h3.mb-3 Includes
+                    hr
+                    .row
+                      .col-md-6
+                        ul.list-paw
+                          li
+                            p Massaging Bath
+                          li
+                            p Nail Trim
+                          li
+                            p Anal Gland Expression
+                          li
+                            p Ear Cleaning and Plucking
+                          li
+                            p Face Trim
+                          li
+                            p Shaved Pads
+                      .col-md-6
+                        ul.list-paw
+                          li
+                            p Feet Rounded
+                          li
+                            p Tail Trim
+                          li
+                            p Sanitary Shave
+                          li
+                            p Basic Cologne
+                          li
+                            p Bandana or Bow
+                    a.btn.btn-primary(href='#getStarted') Get Started
+                  #deshedTreatment.tab-pane.fade
+                    h3.mb-3 Includes
+                    hr
+                    ul.list-paw
+                      li
+                        p Removal of Matts
+                      li
+                        p Bath with De-shedding Shampoo and Conditioner
+                    a.btn.btn-primary(href='#getStarted') Get Started
+                  #fleaBath.tab-pane.fade
+                    h3.mb-3 Includes
+                    hr
+                    ul.list-paw
+                      li
+                        p Brush Out
+                      li
+                        p Deep Clean Bath with Flea and Tick Shampoo
+                    a.btn.btn-primary(href='#getStarted') Get Started
+                  #aLaCarte.tab-pane.fade
+                    h3.mb-3 Includes
+                    hr
+                    .row
+                      .col-md-6
+                        ul.list-paw
+                          li(data-toggle='collapse', href='#faceAndEars')
+                            p
+                              | Face and Ears 
+                              i.fas.fa-caret-down
+                          ul#faceAndEars.collapse
+                            li
+                              p Blueberry Facial
+                            li
+                              p Trim Face Only
+                            li
+                              p Clean &amp; Pluck Ears
+                          li(data-toggle='collapse', href='#mouth')
+                            p
+                              | Mouth 
+                              i.fas.fa-caret-down
+                          ul#mouth.collapse
+                            li
+                              p Teeth Brushing
+                          li(data-toggle='collapse', href='#sanitary')
+                            p
+                              | Sanitary 
+                              i.fas.fa-caret-down
+                          ul#sanitary.collapse
+                            li
+                              p Sanitary Shave Only
+                            li
+                              p Anal Gland Expression Only
+                          li
+                            p Grooming Table Rental
+                      .col-md-6
+                        ul.list-paw
+                          li(data-toggle='collapse', href='#hairColor')
+                            p
+                              | Temporary Hair Color
+                              i.fas.fa-caret-down
+                          ul#hairColor.collapse
+                            li
+                              p Ears &amp; Tail
+                            li
+                              p Mohawk
+                          li(data-toggle='collapse', href='#nails')
+                            p
+                              | Nails 
+                              i.fas.fa-caret-down
+                          ul#nails.collapse
+                            li
+                              p Clip Only
+                            li
+                              p Clip &amp; Dremel
+                            li
+                              p Dremel Only
+                            li
+                              p Paint Nail
+                          li(data-toggle='collapse', href='#paws')
+                            p
+                              | Paws 
+                              i.fas.fa-caret-down
+                          ul#paws.collapse
+                            li
+                              p Shave Pads &amp; Round Feet Only
+                            li
+                              p Paw Pad Moisturizer Only
+                            li
+                              p PAW-dicure
+                    a.btn.btn-primary(href='#getStarted') Get Started
+  section
+    img.img-fluid(src='https://res.cloudinary.com/petzmania/image/upload/v1577932823/5_discount.png', alt='$5 grooming discount')
+  section
+    #gallery__grooming.row.no-gutters
+  include templates/get-started.pug 
+  include templates/contact-us.pug
+include templates/footer.pug
+// Root element of PhotoSwipe. Must have class pswp.
+.pswp(tabindex='-1', role='dialog', aria-hidden='true')
+  //
+    Background of PhotoSwipe.
+    It's a separate element as animating opacity is faster than rgba().
+  .pswp__bg
+  // Slides wrapper with overflow:hidden.
+  .pswp__scroll-wrap
+    //
+      Container that holds slides.
+      PhotoSwipe keeps only 3 of them in the DOM to save memory.
+      Don't modify these 3 pswp__item elements, data is added later on.
+    .pswp__container
+      .pswp__item
+      .pswp__item
+      .pswp__item
+    // Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed.
+    .pswp__ui.pswp__ui--hidden
+      .pswp__top-bar
+        // Controls are self-explanatory. Order can be changed.
+        .pswp__counter
+        button.pswp__button.pswp__button--close(title='Close (Esc)')
+        button.pswp__button.pswp__button--share(title='Share')
+        button.pswp__button.pswp__button--fs(title='Toggle fullscreen')
+        button.pswp__button.pswp__button--zoom(title='Zoom in/out')
+        // Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR
+        // element will get class pswp__preloader--active when preloader is running
+        .pswp__preloader
+          .pswp__preloader__icn
+            .pswp__preloader__cut
+              .pswp__preloader__donut
+      .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+        .pswp__share-tooltip
+      button.pswp__button.pswp__button--arrow--left(title='Previous (arrow left)')
+      button.pswp__button.pswp__button--arrow--right(title='Next (arrow right)')
+      .pswp__caption
+        .pswp__caption__center

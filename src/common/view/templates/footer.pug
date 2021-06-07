@@ -1,0 +1,80 @@
+footer.bg-secondary.py-5
+  .container.text-white
+    .row.my-5
+      .col-md-4
+        h4.mb-3 Location
+        table.table.table-bordered.text-white
+          tr
+            th Address
+            td
+              a(href='https://www.google.com/maps/place/Petz+Mania/@33.0033332,-96.8602245,17z/data=!3m1!4b1!4m5!3m4!1s0x864c244074f4cbb3:0xe3fd4fc5fd114742!8m2!3d33.0033332!4d-96.8580358')
+                | 3585
+                br
+                | Timberglen Rd
+                br
+                | Dallas, TX 75287
+          tr
+            th Tel #
+            td
+              a(href='tel:214-731-6605') 214-731-6605
+          tr
+            th Fax #
+            td
+              a(href='tel:214-731-6845') 214-731-6845
+          tr
+            th Email Address
+            td
+              a(href='mailto:info@petzmania.net')
+                | info@
+                br
+                | petzmania.net
+        h4.mt-md-0.mt-lg-5 Hours of Operation
+        include hours-of-operation.pug
+        +hours-of-operation(true)
+      .col-md-4
+        h4.mt-md-0 Services
+        ul.list-unstyled
+          li
+            a(href='dog-boarding.html') Dog Boarding
+          li
+            a(href='dog-daycare.html') Dog Daycare
+          li
+            a(href='dog-grooming.html') Dog Grooming
+          li
+            a(href='dog-wash.html') Dog Wash
+          li
+            a(href='#') Dog Training (Coming Soon)
+          li
+            a(href='other.html') Other Services
+        h4.mt-md-0.mt-lg-5 Support
+        ul.list-unstyled
+          li
+            a(href='policies.html') Policies and Requirements
+          li
+            a(href='career.html') Join Our Team
+      .col-md-4
+        h4.mt-md-0 Web Camera
+        ul.list-unstyled
+          li
+            a(href='https://apps.apple.com/us/app/ivms-4500-lite/id441697527') Download on iOS
+          li
+            a(href='https://play.google.com/store/apps/details?id=com.mcu.iVMS&hl=en_US') Download on Android
+        h4.mt-md-0.mt-lg-5 Web Application
+        ul.list-unstyled
+          li
+            a(href='/sign-in') Sign In
+          li
+            a(href='/sign-up') Sign Up
+        .d-flex.mt-4
+          i.fab.fa-facebook-square.mr-3(onclick="window.open('https://www.facebook.com/petzmaniatx/')")
+          i.fab.fa-instagram.mr-3(onclick="window.open('https://www.instagram.com/petz_mania_llc/')")
+          i.fab.fa-yelp(onclick="window.open('https://www.yelp.com/biz/petz-mania-dallas')")
+    p.my-5.small
+      | Copyright &copy; 
+      span#date
+      |  Petz Mania LLC. All Rights Reserved.
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin='anonymous')
+script(defer='', src='https://use.fontawesome.com/releases/v5.8.2/js/all.js', integrity='sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH', crossorigin='anonymous')
+script(src='/js/client.bundle.js')

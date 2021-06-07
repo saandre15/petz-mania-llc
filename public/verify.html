@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Browser Verification</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    .row {
+    height: 100vh;
+    }
+  </style>
+</head>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col text-center" id="textbox">
+      <div class="spinner-grow text-warning mb-3" role="status"><span class="sr-only">Loading...</span></div>
+      <h2>Checking your browser before accessing petzmania.net</h2>
+      <p class="lead">Please give us a moment. We&apos;ll automatically redirect you to our home page.</p>
+    </div>
+  </div>
+</div>
+<script src="https://www.google.com/recaptcha/api.js?render=6LfnaacUAAAAAFhb8XVSDRwl73ucsP_r7Br9UuAX"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  grecaptcha.ready(() => {
+  grecaptcha.execute('6LfnaacUAAAAAFhb8XVSDRwl73ucsP_r7Br9UuAX', {action: 'homepage'}).then((token) => {
+  let xhttp = new XMLHttpRequest();
+  const param = `token=${token}`;
+  xhttp.open("POST", document.location.href, true);
+  xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhttp.send(param);
+  xhttp.onreadystatechange = () => {
+  if(xhttp.readyState == 4 && xhttp.status == 200) {
+  let res = JSON.parse(xhttp.responseText);
+  if(res.success === true) {
+  document.location = 'https://' + document.location.host;
+  } else {
+  console.log('You Are A Bot');
+  }
+  };
+  }
+  });
+  });
+  // 5 Second Timeout
+  setTimeout(() => {
+  let textbox = document.querySelector('#textbox');
+  let content = `<p class="text-danger">
+  Please make sure javascript and cookies are enabled, so we can verify your browser.
+  </p>
+  `;
+  textbox.insertAdjacentHTML('beforeend', content);
+  }, 5000);
+</script>

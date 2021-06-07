@@ -1,0 +1,12 @@
+include templates/alert.pug
+
+include templates/header.pug 
++header("Secure Folder Login", "Employee login access ONLY.")
+include templates/nav.pug 
+include templates/login.pug
+
+main
+  +login("Secure Folder Access", securePath, "Note: Only employees are allowed to access this directory.", error)
+  
+  include templates/contact-us.pug 
+include templates/footer.pug 

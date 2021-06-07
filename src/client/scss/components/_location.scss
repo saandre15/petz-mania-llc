@@ -1,0 +1,55 @@
+.location {
+  position: relative;
+  background: linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7)), url('https://res.cloudinary.com/petzmania/image/upload/v1558300386/Assets/location.jpg');
+  background-size: cover;
+  background-position: left 50% bottom 0px;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    height: 30rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 20rem;
+  }
+
+  @include media-breakpoint-down(xs) {
+    height: 15rem;
+  }
+
+  &__goBack {
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+    display: none;
+  }
+
+  &__box {
+    transform: scale(1.00);
+    transition: all .2s;
+  }
+}
+
+input[type=checkbox]#location__IMG:checked ~ .location .location__box {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+}
+
+input[type=checkbox]#location__IMG:checked ~ .location {
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('https://res.cloudinary.com/petzmania/image/upload/v1558300386/Assets/location.jpg');
+  background-size: cover;
+  background-position: left 50%  bottom 0px;
+
+  .location__goBack {
+    display: inline-block;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
+
+
+
+

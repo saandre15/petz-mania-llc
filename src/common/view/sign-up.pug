@@ -1,0 +1,128 @@
+include templates/header.pug
++header("Sign Up", "Please sign up to access our web application, so you can schedule on the go.")
+include templates/nav.pug 
+
+main
+  .container
+    .row
+      form.col-12(action='/sign-up', method='POST')
+        h1.my-5.display-4 Create an Account
+        |         {%ALERT%}
+        h2.mb-4 Owner Information
+        i.fas.fa-user-cog.fa-6x.mb-5
+        .form-group
+          label(for='email') Email Address
+          input#email.form-control.col-md-6(type='email', name='email', value='{%EMAIL%}', required='')
+        .form-group
+          label(for='username') Username
+          input#username.form-control.col-md-6(type='text', name='username', value='{%USERNAME%}', required='')
+        .form-group
+          label(for='password') Password
+          input#password.form-control.col-md-6(type='password', name='password', value='{%PASSWORD%}', required='')
+        .form-group
+          label(for='firstName') First Name
+          input#firstName.form-control.col-md-6(type='text', name='firstName', required='')
+        .form-group
+          label(for='lastName') Last Name
+          input#lastName.form-control.col-md-6(type='text', name='lastName', required='')
+        .form-group
+          label(for='cellPhone') Cell Phone #
+          input#cellPhone.form-control.col-md-6(type='tel', name='cellPhone', required='')
+        .form-group
+          label(for='addr1') Address 1
+          input#addr1.form-control.col-md-6(type='text', name='addr1', required='')
+        .form-group
+          label(for='city') City
+          input#city.form-control.col-md-6(type='text', name='city', required='')
+        .form-group
+          label(for='state') State
+          select#state.form-control.col-md-6(name='state', required='')
+            option(value='AL') Alabama
+            option(value='AK') Alaska
+            option(value='AZ') Arizona
+            option(value='AR') Arkansas
+            option(value='CA') California
+            option(value='CO') Colorado
+            option(value='CT') Connecticut
+            option(value='DE') Delaware
+            option(value='DC') District Of Columbia
+            option(value='FL') Florida
+            option(value='GA') Georgia
+            option(value='HI') Hawaii
+            option(value='ID') Idaho
+            option(value='IL') Illinois
+            option(value='IN') Indiana
+            option(value='IA') Iowa
+            option(value='KS') Kansas
+            option(value='KY') Kentucky
+            option(value='LA') Louisiana
+            option(value='ME') Maine
+            option(value='MD') Maryland
+            option(value='MA') Massachusetts
+            option(value='MI') Michigan
+            option(value='MN') Minnesota
+            option(value='MS') Mississippi
+            option(value='MO') Missouri
+            option(value='MT') Montana
+            option(value='NE') Nebraska
+            option(value='NV') Nevada
+            option(value='NH') New Hampshire
+            option(value='NJ') New Jersey
+            option(value='NM') New Mexico
+            option(value='NY') New York
+            option(value='NC') North Carolina
+            option(value='ND') North Dakota
+            option(value='OH') Ohio
+            option(value='OK') Oklahoma
+            option(value='OR') Oregon
+            option(value='PA') Pennsylvania
+            option(value='RI') Rhode Island
+            option(value='SC') South Carolina
+            option(value='SD') South Dakota
+            option(value='TN') Tennessee
+            option(value='TX') Texas
+            option(value='UT') Utah
+            option(value='VT') Vermont
+            option(value='VA') Virginia
+            option(value='WA') Washington
+            option(value='WV') West Virginia
+            option(value='WI') Wisconsin
+            option(value='WY') Wyoming
+        .form-group
+          label(for='zip') Zip Code
+          input#zip.form-control.col-md-6(type='tel', name='zip', required='')
+        .form-group
+          label(for='emergencyContact') Emergency Contact
+          input#emergencyContact.form-control.col-md-6(type='text', name='emergencyContact', required='')
+        .form-group
+          label(for='emergencyPhone') Emergency Phone
+          input#emergencyPhone.form-control.col-md-6(type='tel', name='emergencyPhone', required='')
+        hr
+        h2.mb-4 Credit Card Information
+        .form-group
+          i.fas.fa-lock.text-success.mr-2
+          |  All info sent is encrypted and secured.
+        .d-flex
+          i.fab.fa-cc-amex.fa-6x.mr-3
+          i.fab.fa-cc-discover.fa-6x.mr-3
+        .d-flex.mb-5
+          i.fab.fa-cc-mastercard.fa-6x.mr-3
+          i.fab.fa-cc-visa.fa-6x.mr-3
+        .form-group
+          label(for='cardName') Card Name
+          input#cardName.form-control.col-md-6(type='text', name='cardName', required='')
+        .form-group
+          label(for='cardHolder') Card Holder
+          input#cardHolder.form-control.col-md-6(type='text', name='cardHolder', required='')
+        .form-group
+          label(for='cardNum') Card Number
+          input#cardNum.form-control.col-md-6(type='tel', name='cardNum', required='')
+        .form-group
+          label(for='expires') Expires
+          input#expires.form-control.col-md-6(type='date', name='expires', required='')
+        p.lead
+          | By clicking submit you are agreeing to our 
+          a.text-secondary.font-weight-bold(href='/policies', target='_blank') Requirements and Policies
+          | .
+        input.btn.btn-primary.my-4(type='submit', value='Submit')
+include templates/footer.pug

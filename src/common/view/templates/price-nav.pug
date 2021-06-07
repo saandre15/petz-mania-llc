@@ -1,0 +1,5 @@
+mixin price-nav(items = [])
+  each val, index in items
+    a(href=`#${val}` class=`btn btn-outline-primary ${(index == items.length - 1) ? "" : "mb-2"}`)
+      | #{val.split('_').map(cur => cur.charAt(0).toUpperCase() + cur.substring(1))).join(' ')}
+      

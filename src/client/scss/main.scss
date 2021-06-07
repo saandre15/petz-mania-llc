@@ -1,0 +1,42 @@
+@import "./vendor/normalize";
+@import "./vendor/bootstrap-grid.scss";
+@import "./vendor/bootstrap.scss";
+
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+
+@import "./base/base";
+@import "./base/typography";
+@import "./base/animation";
+@import "./base/utlilites";
+
+@import "./components/card";
+@import "./components/carousel";
+@import "./components/download";
+@import "./components/form";
+@import "./components/gallery";
+@import "./components/showcase";
+@import "./components/location";
+@import "./components/list";
+@import "./components/tabs";
+@import "./components/modal";
+@import "./components/job-application";
+@import "./components/image";
+@import "./components/stream";
+@import "./components/avatar";
+@import "./components/photoswipe";
+
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./layouts/navigation";
+@import "./layouts/get-started";
+
+@import "./page/index";
+@import "./page/dog-boarding";
+@import "./page/dog-daycare";
+@import "./page/dog-wash";
+@import "./page/dog-grooming";
+@import "./page/career";
+@import "./page/other";
+@import "./page/features";

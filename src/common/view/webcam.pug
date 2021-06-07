@@ -1,0 +1,102 @@
+include templates/header.pug 
++header("Webcam", "Webcam access information.")
+include templates/nav.pug 
+
+main
+  header.py-5.bg-primary
+    .container
+      .row
+        .col
+          h1.text-center.display-4.font-weight-bold Our Web Camera
+  section.py-5
+    .container
+      .row.my-5
+        #stream__container.col-12
+          h1#no_stream.display-4.text-center.mb-5 Please Select An Area to Stream
+          .card
+            .card-body.text-center
+              h2.mb-3 Play Areas
+              .btn.btn-secondary.stream__btn.mt-2.mt-md-0
+                input(classname='d-none', type='hidden', data-channel='3')
+                |  Small Dog
+              .btn.btn-secondary.stream__btn.mt-2.mt-md-0
+                input(classname='d-none', type='hidden', data-channel='4')
+                |  Big Dog
+              .btn.btn-secondary.stream__btn.mt-2.mt-md-0
+                input(classname='d-none', type='hidden', data-channel='2')
+                |  Cat / Exotic Animals
+              h2.mb-3.mt-4 Outdoors
+              .btn.btn-secondary.stream__btn.mt-2.mt-md-0
+                input(classname='d-none', type='hidden', data-channel='9')
+                |  Outdoor A
+              .btn.btn-secondary.stream__btn.mt-2.mt-md-0
+                input(classname='d-none', type='hidden', data-channel='10')
+                |  Outdoor B
+              h2.mb-3.mt-4 Kennels
+              .btn.btn-secondary.stream__btn.mt-2.mt-md-0
+                input(classname='d-none', type='hidden', data-channel='5')
+                |  Kennel A
+              .btn.btn-secondary.stream__btn.mt-2.mt-md-0
+                input(classname='d-none', type='hidden', data-channel='6')
+                |  Kennel B
+              .btn.btn-secondary.stream__btn.mt-2.mt-md-0
+                input(classname='d-none', type='hidden', data-channel='7')
+                |  Kennel C
+              .btn.btn-secondary.stream__btn.mt-2.mt-md-0
+                input(classname='d-none', type='hidden', data-channel='8')
+                |  Kennel D
+  section.py-5
+    .container
+      .row.my-5
+        .col
+          .text-center.display-4 Download The App
+      .row.my-5.justify-content-center
+        .col-md-6.col-lg-3.text-center.mb-3.mb-lg-0
+          .card.card-pop
+            .card-body
+              i.fab.fa-apple.fa-6x.mb-3
+              h2.mb-3 iOS
+              a.btn.btn-primary(href='https://apps.apple.com/us/app/ivms-4500-lite/id441697527') Download Now
+        .col-md-6.col-lg-3.text-center.mb-3.mb-lg-0
+          .card.card-pop
+            .card-body
+              i.fab.fa-android.fa-6x.mb-3
+              h2.mb-3 Android
+              a.btn.btn-primary(href='https://play.google.com/store/apps/details?id=com.mcu.iVMS&hl=en_US') Download Now
+  section
+    .container
+      .row.my-5
+        .col
+          h1.text-center.display-4 Login Credientals
+      .row.my-5.justify-content-center
+        .col-md-8
+          .card.box-shad-primary
+            .card-body
+              .form-group
+                label Device Name
+                input#deviceName.form-control(type='text', name='deviceName', value='Petzmania', readonly='')
+              .form-group
+                label Register Mode
+                input#connectMode.form-control(type='text', name='connectMode', value='IP/Domain', readonly='')
+              .form-group
+                label IP Address
+                .input-group
+                  input#UUID.form-control(type='text', name='UUID', value='98.156.148.239', readonly='')
+                  .input-group-append
+                    button#UUIDCopyBtn.input-group-text
+                      span
+                        i.fas.fa-copy
+              .form-group
+                label Port Number
+                input#port.form-control(type='text', name='port', value='8000', readonly='')
+              .form-group
+                label Username
+                input#username.form-control(type='text', name='username', value='daycare', readonly='')
+              .form-group
+                label Password
+                input#password.form-control(type='text', name='password', value='1234', readonly='')
+              .form-group
+                label Camera Number
+                input#cam.form-control(type='text', name='cam', value='18', readonly='')
+  include templates/contact-us.pug
+include templates/footer.pug

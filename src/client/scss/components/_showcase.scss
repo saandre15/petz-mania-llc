@@ -1,0 +1,155 @@
+.showcase {
+  margin: auto;
+  &__box {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    box-shadow: 5rem 5rem 0px $color-secondary-1;
+
+    @include media-breakpoint-down(md) {
+      box-shadow: 2.5rem 2.5rem 0px $color-secondary-1;
+    }
+
+    @include media-breakpoint-down(xs) {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto;
+    }
+  }
+
+  &__each {
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+
+    @include media-breakpoint-down(lg) {
+      width: 15rem;
+      height: 15rem;
+      > :first-child {
+        filter: brightness(60%);
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 12.5rem;
+      height: 12.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:hover > :first-child {
+        transition: all .2s;
+        filter: blur(10px)  brightness(60%);
+        transform: scale(1.15);
+      }
+  
+      &:hover {
+        a {
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+
+  &__boarding {
+    background: url('https://res.cloudinary.com/petzmania/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1558293292/Assets/dog-boarding-showcase.jpg');
+    background-size: cover;
+    height: inherit;
+
+
+  }
+
+  &__daycare {
+    background: url('https://res.cloudinary.com/petzmania/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1558293292/Assets/dog-daycare-showcase.jpg');
+    background-size: cover;
+    height: inherit;
+  }
+
+  &__grooming {
+    background: url('https://res.cloudinary.com/petzmania/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1558293292/Assets/dog-grooming-showcase.jpg');
+    background-size: cover;
+    height: inherit;
+  }
+
+  &__wash {
+    background: url('https://res.cloudinary.com/petzmania/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1558293292/Assets/dog-wash-showcase.jpg');
+    background-size: cover;
+    height: inherit;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    color: #fff;
+    padding: 2rem;
+
+    a {
+      display: none;
+    }
+
+    @include media-breakpoint-down(lg) {
+      bottom: .5rem;
+      padding: 1rem;
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      bottom: .25rem;
+      padding: .5rem;
+
+    }
+  }
+}
+
+.showcase-list {
+  display: flex;
+  padding: 1rem;
+  hyphens: auto;
+  transform: translateX(0%);
+  width: 400%;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__block {
+    width: 25%;
+
+    @include media-breakpoint-down(sm) {
+      .row {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__img {
+    flex: 0 0 30%;
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 3.5rem;
+      margin-top: 2rem;
+    }
+    svg {
+      color: $color-primary-1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &__content {
+    flex: 0 0 70%;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.navOffset {
+  &:before {
+    content: '';
+    display: block;
+    height: 5rem;
+    visibility: hidden;
+    margin-top: -5rem;
+    z-index: -1;
+  }
+}
+
+.sticky-center {
+  position: sticky;
+  top: 40%;
+  overflow-y: auto;
+}
+
+.sticky-top-center {
+  position: sticky;
+  top: 20%;
+  overflow-y: auto;
+}
+
+.sticky-navOffset {
+  position: sticky;
+  top: 5rem;
+  overflow-y: auto;
+}
+
+
+.overflowScrollY {
+  overflow-y: scroll;
+}
+

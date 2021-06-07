@@ -1,0 +1,60 @@
+.card-pop {
+  transition: .2s all ease-out;
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+.card-stack {
+  position: relative;
+  height: 30rem;
+  &__box {
+    
+    &--1 {
+      transition: all .2s;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 3rem;
+      box-shadow: .5rem .5rem 1rem #000;
+    }
+
+    &--2 {
+      width: 100%;
+      position: absolute;
+      top: 5rem;
+      left: -1rem;
+      box-shadow: .5rem .5rem 1rem #000;
+    }
+
+    &--1:hover ~ &--2 {
+      z-index: -1;
+    }
+  }
+
+  &__IMG {
+    width: inherit;
+    height: 20rem;
+    position: relative;
+    filter: brightness(60%);
+  }
+
+  &__content {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+
+    h2 {
+    padding: .25rem;
+    background-image: linear-gradient($color-primary-1, $color-primary-1);
+    }
+
+    a {
+      @include absCenter;
+    }
+  }
+}

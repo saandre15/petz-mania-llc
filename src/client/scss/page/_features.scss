@@ -1,0 +1,14 @@
+.features__image {
+  &--1 {
+    clip-path: circle(30% at 50% 50%);
+  }
+  &--2 {
+    clip-path: circle();
+  }
+  &--3 {
+    clip-path: circle();
+  }
+  &--4 {
+    clip-path: circle();
+  }
+}

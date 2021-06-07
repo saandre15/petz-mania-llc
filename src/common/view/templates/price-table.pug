@@ -1,0 +1,21 @@
+mixin price-table(name, indexer, message='', headers, data)
+  h1.my-4.display-4(id=`${indexer}`)
+    | #{name}
+  if message != ''
+    p.text-danger.small
+      | *
+      | #{message}
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        if headers
+          each val, index in headers 
+            th= val
+    tbody
+      if data
+        each vals, i in data
+          tr 
+            if vals
+              each val, j in vals 
+                td= val
+      

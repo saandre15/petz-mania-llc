@@ -1,0 +1,39 @@
+
+
+#stream {
+
+  &__box {
+    width: 100%;
+    position: relative;
+  }
+
+  &__menu-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translateX(-50%), translateY(-50%);
+  }
+
+  &__canvas {
+    width: inherit;
+    position: relative;
+    z-index: 100;
+  }
+  
+  &__logo {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 200;
+  }
+
+}

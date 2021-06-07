@@ -1,0 +1,28 @@
+include templates/header.pug 
++header("Successfully Signed Up", "Your account has successful been created.")
+include templates/nav.pug 
+
+main
+  header.py-5
+    .container
+      .row.my-5
+        .col-md-6
+          .card
+            .card-body
+              h1.mb-3 Your Login Credentials
+              table.table.table-bordered
+                tbody
+                  tr
+                    th Email
+                    td {%EMAIL%}
+                  tr
+                    th Username
+                    td {%USERNAME%}
+                  tr
+                    th Password
+                    td {%PASSWORD%}
+              p.text-info
+                | If you need to access your password, we have sent an email with your credentials and the password attached. 
+              a.btn.btn-primary.mt-3(href='/sign-in', target='_blank') Sign In
+
+include templates/footer.pug

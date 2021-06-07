@@ -1,0 +1,190 @@
+include templates/header.pug 
++header("Home Page", "Discover the ONE STOP SOLUTION for pet sitting, maintenance and more - whether you are on vacation or at work, you can count on us to keep your pet safe and happy.")
+include templates/nav.pug 
+
+main
+  header
+    .jumbotron.index-header
+      .container
+        .row.my-5
+          .col-md-6.text-white.d-none.d-md-block
+            h1.display-4
+              | Welcome to Petz Mania &mdash; Where Happy Pets Should Be
+            p.lead.mt-5
+              | Petz Mania is the
+              span.font-weight-bold ONE STOP SOLUTION
+              |  for pet
+              |  sitting, maintenance and more &mdash; whether you are on vacation
+              |  or at work, you can count on us to keep your pet safe and happy.
+          .col-md-6.col-lg-4.mx-auto
+            include templates/sign-up-module.pug
+  section.py-3.text-center
+    .container
+      .row
+        .col-12
+          h1.text-muted.font-weight-light Partner Spotlight
+      .row.justify-content-center.my-4
+        .col-6.col-sm-4.col-md-3.col-lg-2
+          .card
+            a.card-body(href='https://msrnt.com')
+              img.card-img-top(src='https://res.cloudinary.com/petzmania/image/upload/v1558483568/Assets/partner-msrnt.gif', alt='MSRNT')
+  section.py-5.bg-primary
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center Most Popular Services
+      .row
+        .showcase
+          .showcase__box
+            .showcase__each
+              .showcase__boarding
+              .showcase__content
+                h1.font-weight-bold Dog Boarding
+                a.btn.btn-outline-primary.btn-lg(href='dog-boarding.html') More Info
+            .showcase__each
+              .showcase__daycare
+              .showcase__content
+                h1.font-weight-bold Dog Daycare
+                a.btn.btn-outline-primary.btn-lg(href='dog-daycare.html') More Info
+            .showcase__each
+              .showcase__grooming
+              .showcase__content
+                h1.font-weight-bold Dog Grooming
+                a.btn.btn-outline-primary.btn-lg(href='dog-grooming.html') More Info
+            .showcase__each
+              .showcase__wash
+              .showcase__content
+                h1.font-weight-bold Dog Wash
+                a.btn.btn-outline-primary.btn-lg(href='dog-wash.html') More Info
+  section.py-5.bg-dark.text-white
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center In a hurry? &mdash; Get a taxi on us
+      .row.my-5
+        .col
+          p.lead.text-right
+            | We are available to transport your pet(s) anywhere and at any time.
+            | We will stay with your pet at your apartments if needed, as our
+            | schedule allows. We will go to your house or meet you at your
+            | workplace to pick up your dog in the morning and drop off your dog
+            | in the evening for our daycare service.
+      .row.my-5
+        .col.text-center
+          a.btn.btn-primary(href='#getStarted') Get Started
+  section.py-5
+    .container
+      .row.my-5
+        h1.display-4.mx-auto
+          | Our Location
+      .row.my-5.justify-content-center
+        input#location__IMG.d-none(type='checkbox', name='location__IMG', checked='')
+        .location
+          .row
+            .col-md-6.p-5.location__box
+              .card.border-primary
+                .card-body
+                  h2 Information
+                  table.table
+                    tbody
+                      tr
+                        th Address
+                        td
+                          a(href='https://www.google.com/maps/place/Petz+Mania/@33.0033332,-96.8602245,17z/data=!3m1!4b1!4m5!3m4!1s0x864c244074f4cbb3:0xe3fd4fc5fd114742!8m2!3d33.0033332!4d-96.8580358', target='_blank') 3585 Timberglen Road, Dallas TX
+                      tr
+                        th Phone #
+                        td
+                          a(href='tel:214-731-6605') 214-731-6605
+                      tr
+                        th Fax #
+                        td
+                          a(href='tel:214-731-6845') 214-731-6845
+                      tr
+                        th Email
+                        td
+                          a(href='mailto:info@petzmania.net') info@petzmania.net
+                  label.btn.btn-primary(for='location__IMG') See Location
+            .col-md-6.p-5.location__box
+              .card.border-primary
+                .card-body
+                  h2 Hours of Operation
+                  table.table
+                    tbody
+                      tr
+                        th Monday-Friday
+                        td 6:30am &ndash; 7:00pm
+                      tr
+                        th Saturday
+                        td 7:30am &ndash; 7:00pm
+                      tr
+                        th Sunday
+                        td
+                          | 7:30am &ndash; 11:00am 
+                          br
+                          | 4:00pm &ndash; 7:00pm
+                  p.text-danger
+                    | *Grooming closed on Sunday and Monday
+            label.btn.btn-primary.location__goBack(for='location__IMG') &larr; See Info
+  section.py-5
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center
+            | Worried about an accident? &mdash; Get Insured
+      .row.my-5
+        p.lead.text-center
+          | For only
+          span.font-weight-bold $2.00 per pet/per visit/per day
+          | ,
+          |           Petz Mania Warranty Program will cover up to
+          span.font-weight-bold $300 in vet fees
+          |  due to
+          |           injury-related accidents that may occur while your pet(s) are in our
+          |           care.
+      .row
+        .col-md-6
+          .card
+            .card-body
+              h3.mb-3 Coverage:
+              ul.list-paw
+                li
+                  | An injury that could have been prevented by a staff member
+                  | such as a guest slipping on a wet floor and injuring a leg or
+                  | hip, stepping on debris, that could puncture or wound, that
+                  | may have been thrown in our yard by the surround public
+                li
+                  | An injury that may have been caused by a staff member such as
+                  | inadvertently medicating the wrong pet
+                li
+                  | Conditions such as diarrhea and vomiting that are found to be
+                  | from being fed the wrong food, ingesting toy parts, etc. &ndash; but
+                  | not due to stress of being in a new environment
+        .col-md-6
+          .card.mt-5.mt-md-0
+            .card-body
+              h3.mb-3 Exclusion:
+              ul.list-paw
+                li
+                  | Any injury while the dog is in the hands of the owner or
+                  | authorized agent during check in/ check out
+                li
+                  | Illness is not covered for pets that are younger than 4 months
+                  | or 10 years or older
+                li Pre-existing conditions such as:
+                ul
+                  li Ear Infections
+                  li
+                    | Soreness form injuries or conditions such as arthritis and
+                    | hip dysplasia
+                  li Common skin issues, redness, sores, or cracking
+                li Any stress related vomiting, diarrhea, or conditions
+                li
+                  | Self-Caused injury such as injuries from excessive jumping,
+                  | chewing its bred, chewing its own nails, rubbing its nose raw,
+                  | etc.
+                li And More&mldr;
+      .row.my-5
+        a.btn.btn-primary.btn-sm.mx-auto(href='/assets/pdf/warrenty.pdf') Download Warrenty Program - PDF
+  include templates/get-started.pug 
+  include templates/contact-us.pug 
+include templates/footer.pug

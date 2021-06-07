@@ -1,0 +1,37 @@
+include templates/header.pug 
++header("Support Success", "You've successful submitted a contact us form. We'll respond as soon as possible.")
+include templates/nav.pug 
+
+main
+  header.py-5.text-center.bg-primary
+    .container
+      .row
+        .col
+          h1.display-4.font-weight-bold Thank you for the Response!
+          p.mt-3 We&apos;ll try to respond to your questions or concerns as soon as possible[24-48 hours]. If we do not respond it that timeframe, please give us a call.
+  section.py-5
+    .container
+      .row.my-5
+        .col
+          h1.display-4.text-center Here a copy of your response
+      .row.my-5.justify-content-center
+        .col-md-12
+          .form
+            .form__body
+              .form-group
+                label(for='name') Enter Name
+                input#name.form-control(type='text', name='name', value=name, readonly='')
+              .form-group
+                label(for='email') Enter Email
+                input#email.form-control(type='email', name='email', value=email, readonly='')
+              .form-group
+                label(for='findUs') How did you find us?
+                input#findUs.form-control(type='text', name='findUs', value=findUs, readonly='')
+              .form-group
+                label(for='reason') Contacting us on the behalf of?
+                input#reason.form-control(type='text', name='reason', value=reason, readonly='')
+              .form-group
+                label(for='message') Message
+                textarea#message.form-control(name='message', cols='30', rows='5', readonly='') #{message}
+
+include templates/footer.pug
