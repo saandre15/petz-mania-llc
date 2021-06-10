@@ -7,8 +7,9 @@
 
 <h1 style="text-align: center">Petz Mania LLC Website</h1>
 
-![Development Build]([workflows]/build.yml/badge.svg?branch=development) 
-![Development Test]([workflows]/test.yml/badge.svg?branch=development) | 
+
+![Deploy & Build & Test]([workflows]/build+test+deploy/action.yml/badge.svg?branch=development) 
+![Dynamic App Security Testing]()
 
 This is the open source version of the Petz Mania LLC website. The website will not work without the proper environment variables. Only authorized personels will have access to this information.
 

@@ -1,0 +1,11 @@
+name: Build NodeJS Application
+description: Builds the development version of the application
+runs:
+  using: composite
+  steps:
+  - uses: actions/checkout@v2
+    with:
+      ref: refs/heads/development
+  -run: |
+    npm ci
+    npm run build-dev

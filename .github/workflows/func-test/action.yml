@@ -1,0 +1,11 @@
+name: Functionality Testing
+description: Checks if the functionality of a website is working properly
+runs:
+  using: composite
+  steps:
+  - uses: actions/checkout@v2
+    with:
+      ref: refs/heads/development
+  -run: |
+    npm ci
+    npm run test-dev

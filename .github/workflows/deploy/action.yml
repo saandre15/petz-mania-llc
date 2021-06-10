@@ -1,0 +1,6 @@
+name: Build & Deploy 
+description: Deploy code base to the server
+runs:
+  using: "composite"
+  steps: 
+  - run: source scripts/deploy.sh

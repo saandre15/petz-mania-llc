@@ -1,0 +1,8 @@
+name: Dynamic App Security Testing
+description: Automates penetration testing
+runs:
+  using: "composite"
+  steps:
+    uses: zaproxy/action-baseline@v0.3.0
+    with: 
+      target: "https://${{ secrets.DEVELOPMENT_URL }}"

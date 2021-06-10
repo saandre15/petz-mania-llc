@@ -1,0 +1,8 @@
+name: Static App Security Testing
+description: Automates source code security audits
+uses: microsoft/DevSkim-Action@v1
+with:
+  directory-to-scan: src
+  should-scan-archives: false
+  output-filename: devskims-results-${{ github.run_id }}.txt
+  output-directory: log/security

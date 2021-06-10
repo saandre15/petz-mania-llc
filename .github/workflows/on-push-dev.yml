@@ -1,0 +1,28 @@
+name: On Development Push
+
+on:
+  push:
+    branches: [ development ]
+
+jobs:
+  build:
+    run-on: ubuntu-latest
+
+    strategy: 
+      matrix:
+        node-version: [ 12.x, 14.x, 15.x ]
+
+    # Functionality Testing
+    - uses: ./.github/workflows/func-test/action.yml
+    # Code Base Security Testing
+    - uses: ./.github/workflows/sast/action.yml
+    # Linting Testing
+    - uses: ./.github/workflows/linter/action.yml
+    # Build Testing
+    - uses: ./.github/workflows/build-dev/action.yml
+    # Deployment
+    - uses: ./.github/workflows/deploy/action.yml
+    # Penetration Testing
+    - uses: ./github/workflows/dast/action.yml 
+
+        

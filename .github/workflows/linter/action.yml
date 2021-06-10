@@ -1,0 +1,6 @@
+name: Lint Code Base
+description: Makes sure the code base is properly linted
+uses: docker://ghcr.io/github/super-linter:slim-v4
+env: 
+  VALIDATE_ALL_CODEBASE: false
+  DEFAULT_BRANCH: development
